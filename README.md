@@ -17,6 +17,7 @@ instalar como modulo (TODO) ahora solo es un proceso que se ejecuta al principio
 Segundo proceso: picamera2fb
 instalar v4l2 para raspberry, configurar /dev/video0 con los parametros que optimicen las converiones/tratamiento de la imagen
 (actualmente RGB565 para todo: fb, lcd y picam)
+uv4l --driver raspicam --auto-video_nr --width 320 --height 240 --encoding rgb565 --extension-presence=1 --framerate 30
 
 Tercer proceso: hacer funcionar los 16 FUN LED's (i2c)
 activar i2c
