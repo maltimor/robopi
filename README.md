@@ -43,5 +43,24 @@ Cuarto proceso: poner todo junto y hacer funcionar el robot
 de momento usar el teclado wireles para manejar el robot
 hacer video
 
+Otra cosa: poner nodeJs
+To Download via command line
+* wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+* 
+sudo dpkg -i node_latest_armhf.deb
+# Check installation
+node -v
+5. Make it run on boot
+
+This is the hardest part if you don't really know what you're doing.
+
+You can define things to run on boot in /etc/rc.local. In that shell script, you don't have the same path as when you log in, so just running node app.js won't do the trick.
+
+I tried a lot of different things that all gave errors like Illegal instruction or Permission denied or File not found.
+
+What does work, is running one command as the default pi user. Because that user does have node in his path, the command is known.
+
+su pi -c 'node /home/pi/server.js < /dev/null &'
+I suggest using an absolute path to your Node.js-file just to make sure.
 
 
