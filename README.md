@@ -64,3 +64,13 @@ su pi -c 'node /home/pi/server.js < /dev/null &'
 I suggest using an absolute path to your Node.js-file just to make sure.
 
 
+Bueno, parece que ya he instalado node, y tengo un servidor con socket.io que sirve una camara web y la relanza a los que se han conectado.
+
+
+
+Ahora estoy con fgrab
+necesita instalar zlib y libpng
+# sudo apt-get install zlib-bin libpn-dev
+
+
+
