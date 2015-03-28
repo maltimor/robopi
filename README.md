@@ -40,6 +40,8 @@ Segundo proceso: picamera2fb
 instalar v4l2 para raspberry, configurar /dev/video0 con los parametros que optimicen las converiones/tratamiento de la imagen
 (actualmente RGB565 para todo: fb, lcd y picam)
 uv4l --driver raspicam --auto-video_nr --width 320 --height 240 --encoding rgb565 --extension-presence=1 --framerate 30
+uv4l --driver raspicam --video_nr 0 --width 160 --height 120 --encoding rgb565 --extension-presence=1 --framerate 50
+uv4l --driver raspicam --video_nr 0 --width 320 --height 240 --encoding rgb565 --extension-presence=1 --framerate 50
 
 Tercer proceso: hacer funcionar los 16 FUN LED's (i2c)
 activar i2c
@@ -93,6 +95,14 @@ Bueno, parece que ya he instalado node, y tengo un servidor con socket.io que si
 Ahora estoy con fgrab
 necesita instalar zlib y libpng
 # sudo apt-get install zlib-bin libpn-dev
+
+
+
+# mas cosas
+OSCILOSCOPIO
+hay que hacer funcionar el spi/i2c
+
+
 
 
 
