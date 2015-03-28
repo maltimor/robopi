@@ -14,6 +14,28 @@ Bajar el modulo de yaolet, personalizar, modificar
 Primer proceso: fb2lcd
 instalar como modulo (TODO) ahora solo es un proceso que se ejecuta al principio.
 
+En el directorio /etc/rc0.d crear fichero K01fb2lcd como enlace a /etc/init.d/fb2lcd
+dicho fichero contiene
+#!/bin/bash  
+# description: Tomcat Start Stop Restart  
+# processname: tomcat  
+# chkconfig: 234 20 80  
+
+case $1 in  
+  start)  
+     exec /opt/fb2lcd &
+   ;;   
+  stop)     
+     
+    ;;   
+  restart)  
+ 
+    ;;   
+esac      
+exit 0  
+
+
+
 Segundo proceso: picamera2fb
 instalar v4l2 para raspberry, configurar /dev/video0 con los parametros que optimicen las converiones/tratamiento de la imagen
 (actualmente RGB565 para todo: fb, lcd y picam)
