@@ -102,6 +102,31 @@ necesita instalar zlib y libpng
 OSCILOSCOPIO
 hay que hacer funcionar el spi/i2c
 
+activar spi:
+sudo nano /etc/modprobe.d/raspi-blacklist.conf
+#blacklist spi-bcm2708
+Test the SPI port is working by typing:
+ls /dev/spidev*
+You should see the following:
+
+
+/dev/spidev0.0  /dev/spidev0.1
+There are 2 spidev devices shown.  The first number refers to the SPI peripheral which in both cases is 0 (the RPi only has 1 SPI port), the second number represents the chip select pins CS0 and CS1 .
+
+
+instalar las herramientas bcm
+
+# download the latest version of the library, say bcm2835-1.xx.tar.gz, then:
+tar zxvf bcm2835-1.xx.tar.gz
+cd bcm2835-1.xx
+./configure
+make
+sudo make check
+sudo make install
+
+
+
+
 
 
 
