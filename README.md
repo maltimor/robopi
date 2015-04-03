@@ -125,6 +125,16 @@ sudo make check
 sudo make install
 
 
+ 
+RPI2
+
+He decidido pasarme a la RPI2, y voy a instalar el modulo de la pantalla mztx ext
+El proyecto FBMODUKE he tenido que cambiar la direccion base de BCM2835 de 0x2000000 por 0x3F00000 y todo va muy bien.
+Bueno, a veces se queda colgao
+
+He puesto la RPI2 a 1Ghz creo que me he pasao
+
+
 
 
 
